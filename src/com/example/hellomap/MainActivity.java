@@ -2,8 +2,12 @@ package com.example.hellomap;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 
 public class MainActivity extends FragmentActivity {
     private GoogleMap mMap;
@@ -31,5 +35,15 @@ public class MainActivity extends FragmentActivity {
         }
         // Initialize map options. For example:
         // mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+        
+        mMap.setMyLocationEnabled(true);
+//        PolylineOptions track = new PolylineOptions();
+//        Polyline poly;
+//        
+//        for (int i=1; i < 3; i++){
+//            LatLng coord = new LatLng(i*10, i*10);
+//            track.add(coord);
+//            poly = mMap.addPolyline(track);
+//        }
     }
 }
